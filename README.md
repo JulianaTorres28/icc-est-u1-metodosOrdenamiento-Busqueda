@@ -1,18 +1,53 @@
-## Getting Started
+# Métodos de Ordenamiento y Búsqueda en Java (MVC)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Estudiante: Juliana Torres
 
-## Folder Structure
+Este proyecto implementa algoritmos de **ordenamiento** y **búsqueda binaria** aplicados a objetos `Person` (con nombre y edad), siguiendo el patrón **Modelo-Vista-Controlador (MVC)**.  
+Forma parte de la práctica de laboratorio de la asignatura **Estructura de Datos** en la Universidad Politécnica Salesiana.
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📂 Estructura del Proyecto
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **models.Person**  
+  Clase que representa a una persona con atributos `name` y `age`.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **views.View**  
+  Maneja la interacción con el usuario mediante consola.  
+  Métodos principales: `showMenu()`, `inputPerson()`, `displayPersons()`, `displaySearchResult()`, `inputAge()`, `inputName()`.
 
-## Dependency Management
+- **controllers.SortingMethods**  
+  Contiene los algoritmos de ordenamiento:  
+  - Burbuja por nombre (`sortByNameWithBubble`)  
+  - Selección descendente por nombre (`sortByNameWithSelectionDes`)  
+  - Inserción por edad (`sortByAgeWithInsertion`)  
+  - Inserción por nombre (`sortByNameWithInsertion`)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **controllers.SearchMethods**  
+  Contiene los algoritmos de búsqueda binaria y validación:  
+  - `binarySearchByAge`  
+  - `binarySearchByName`  
+  - `isSortedByAge`  
+  - `isSortedByName`
+
+- **controllers.Controller**  
+  Coordina el flujo de la aplicación: ingreso de personas, ordenamiento, búsqueda y visualización.
+
+- **app.Main**  
+  Punto de entrada del programa. Crea las instancias de `View`, `SortingMethods`, `SearchMethods` y `Controller`, y ejecuta `controller.start()`.
+
+---
+
+## 🚀 Ejecución
+
+![alt text](assets/inicio.png)
+
+![alt text](<assets/opcion 1.png>)
+
+![alt text](<assets/opc 2.png>)
+
+![alt text](<assets/opc 3.png>)
+
+![alt text](<assets/opc 4.png>)
+
+![alt text](assets/0.png)
